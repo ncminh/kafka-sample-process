@@ -1,0 +1,26 @@
+﻿﻿# componse kafka
+docker compose -f kafka-single-node.yml up -d
+
+# use kafka command line
+docker exec -it kafka-broker /bin/bash
+
+
+# in kafka CLI:
+
+kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first_topic --property "parse.key=true" --property "key.separator=:"
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first_topic --from-beginning
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic second_topic --from-beginning
+
+
+# build docker
+UTA.DataProcessor % docker build -t procex . 
+
+# Fake data
+
+demo2:{"id":2,"title": "Test msg 2"}
+demo3:{"id":3,"title": "Test msg 3"}
+demo4:{"id":4,"title": "Test msg 4"}
+demo5:{"id":5,"title": "Test msg 5"}
+demo6:{"id":6,"title": "Test msg 6"}
+demo7:{"id":7,"title": "Test msg 7"}
