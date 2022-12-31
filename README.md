@@ -1,7 +1,7 @@
 ﻿## A quick & dirty implementation of how to work with a Kafka flow + local data store.
 
-######Dotnet version: 6
-Nugets:
+###### Dotnet version: 6
+> Nugets:
 - ConfluentKafka for .NET
 - Newtonsoft.Json
 - Microsoft hosting extensions. ( Microsoft.Extensions.Hosting )
