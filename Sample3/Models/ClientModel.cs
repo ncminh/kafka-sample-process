@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sample3.Models
 {
+    /// <summary>
+    /// Records from database that have clientid.
+    /// </summary>
     public class ClientModel
     {
         readonly string _id;

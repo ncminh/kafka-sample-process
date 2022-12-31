@@ -12,10 +12,6 @@ kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first_topic 
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first_topic --from-beginning
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic second_topic --from-beginning
 
-
-# build docker
-UTA.DataProcessor % docker build -t procex . 
-
 # Fake data
 
 demo2:{"id":2,"title": "Test msg 2"}

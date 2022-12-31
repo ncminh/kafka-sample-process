@@ -10,12 +10,15 @@ namespace Sample3
         {
             Console.WriteLine("Hello, World!");
 
+            // Using DI to inject neccessary classes to the program.
+
             IHost host = Host.CreateDefaultBuilder(args)
                 .ConfigureServices(services =>
                 {
                     services.AddTransient<IHttpClientFaker, HttpClientFaker>();
                     services.AddTransient<IKafkaService, KafkaService>();
 
+                    /// Register the background service ( KafkaWorker )
                     services.AddHostedService<KafkaConsumerWorker>();
                 })
                 .Build();

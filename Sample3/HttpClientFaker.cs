@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 
 namespace Sample3
 {
-    internal class HttpClientFaker : IHttpClientFaker
+    /// <summary>
+    /// A fake http client to return a list of object with its clientid.
+    /// </summary>
+    public class HttpClientFaker : IHttpClientFaker
     {
         public IEnumerable<ClientModel> GetClients(int numOfClients)
         {
